@@ -1,6 +1,6 @@
-package ru.azaytsev.manager.service;
+package ru.azaytsev.catalogue.service;
 
-import ru.azaytsev.manager.entity.Product;
+import ru.azaytsev.catalogue.entity.Product;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +13,7 @@ public interface ProductService {
 
     Optional<Product> findProduct(int productId);
 
-   public void updateProduct(Integer id, String title, String details);
+    public void updateProduct(Integer id, String title, String details);
 
     void deleteProduct(Integer id);
 }

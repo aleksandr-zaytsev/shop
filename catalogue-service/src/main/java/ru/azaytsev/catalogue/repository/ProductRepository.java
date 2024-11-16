@@ -1,6 +1,6 @@
-package ru.azaytsev.manager.repository;
+package ru.azaytsev.catalogue.repository;
 
-import ru.azaytsev.manager.entity.Product;
+import ru.azaytsev.catalogue.entity.Product;
 
 import java.util.List;
 import java.util.Optional;

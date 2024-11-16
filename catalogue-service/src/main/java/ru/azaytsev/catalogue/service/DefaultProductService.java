@@ -1,10 +1,9 @@
-package ru.azaytsev.manager.service;
+package ru.azaytsev.catalogue.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import ru.azaytsev.manager.entity.Product;
-import ru.azaytsev.manager.repository.ProductRepository;
+import ru.azaytsev.catalogue.entity.Product;
+import ru.azaytsev.catalogue.repository.ProductRepository;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -37,7 +36,7 @@ public class DefaultProductService implements ProductService {
                 .ifPresentOrElse(product -> {
                     product.setTitle(title);
                     product.setDetails(details);
-    }, () -> {
+                }, () -> {
                     throw new NoSuchElementException();
                 });
     }
