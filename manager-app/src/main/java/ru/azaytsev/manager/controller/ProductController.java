@@ -9,6 +9,8 @@ import ru.azaytsev.manager.client.ProductsRestClient;
 import ru.azaytsev.manager.controller.payload.UpdateProductPayload;
 import ru.azaytsev.manager.entity.Product;
 
+import java.security.Principal;
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping(("catalogue/products/{productId:\\d+}"))

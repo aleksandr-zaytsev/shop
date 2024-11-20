@@ -11,6 +11,7 @@ import ru.azaytsev.catalogue.controller.payload.NewProductPayload;
 import ru.azaytsev.catalogue.entity.Product;
 import ru.azaytsev.catalogue.service.ProductService;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +23,8 @@ public class ProductsRestController {
     private final ProductService productService;
 
     @GetMapping
-    public Iterable<Product> findProducts(@RequestParam(name = "filter", required = false) String filter) {
+    public Iterable<Product> findProducts(@RequestParam(name = "filter", required = false) String filter,
+                                          Principal principal) {
         return this.productService.findAllProducts(filter);
     }
 
